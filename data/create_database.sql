@@ -38,14 +38,14 @@ CREATE TABLE "role" ( -- Création de la table  Role
 CREATE TABLE "user" ( -- Création de la table  User
 
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "civility" civility NOT NULL,
         "email" email NOT NULL UNIQUE,
         "password" VARCHAR NOT NULL,
         "firstname" VARCHAR NOT NULL,
         "lastname" VARCHAR NOT NULL,
+        "civility" civility NOT NULL,
         "address" VARCHAR DEFAULT NULL,
         "aditionnal_address" VARCHAR DEFAULT NULL,
-        "contry" VARCHAR DEFAULT NULL,
+        "country" VARCHAR DEFAULT NULL,
         "zipcode" postal_code_europe VARCHAR(6) DEFAULT NULL,
         "phone_number" phone_number INTEGER DEFAULT NULL,
         "role_id" INTEGER DEFAULT 2 REFERENCES "role"("id")
@@ -55,7 +55,6 @@ CREATE TABLE "newsletter_mail_suscribed" ( -- Création de la table  newsletter_
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         "email" VARCHAR NOT NULL
 );
-
 
 
 CREATE TABLE "image" ( -- Création de la table image 
@@ -88,7 +87,6 @@ CREATE TABLE  "purchase" (
         "status" VARCHAR(50) NOT NULL -- en cours (de traitement) / traitée / en livraison / terminée
 );
 
-
 CREATE TABLE "purchase_product" (
 
         "id" "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -100,7 +98,7 @@ CREATE TABLE "purchase_product" (
 CREATE TABLE "category_product" (  -- Table jointure entre category et product N, N
 
         "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "name" VARCHAR(255) NOT NULL
+        "name" VARCHAR(255) NOT NULL,
         "category_id" INTEGER REFERENCES "category"("id"),
         "product_id" INTEGER REFERENCES "product"("id"),
 );
