@@ -46,6 +46,7 @@ CREATE TABLE "user" ( -- Création de la table  User
         "address" VARCHAR DEFAULT NULL,
         "aditionnal_address" VARCHAR DEFAULT NULL,
         "country" VARCHAR DEFAULT NULL,
+        "city" VARCHAR DEFAULT NULL,
         "zipcode" postal_code_europe VARCHAR(6) DEFAULT NULL,
         "phone_number" phone_number INTEGER DEFAULT NULL,
         "role_id" INTEGER DEFAULT 2 REFERENCES "role"("id")

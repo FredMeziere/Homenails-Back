@@ -6,12 +6,13 @@ BEGIN;
 ALTER TABLE "user" DROP CONSTRAINT user_role_id_fkey;
 
 /*Permet de modifier la table stretch existante et de drop la contrainte stretch_category_id_fkey */
-ALTER TABLE "product" DROP CONSTRAINT stretch_category_id_fkey;
+ALTER TABLE "product" DROP CONSTRAINT product_category_id_fkey;
 
 
 /* Insertion/seeding des données dans la table user : en l'occurence ici un user */
-INSERT INTO "user" ("id", "email", "password", "civility", "firstname", "lastname", "address", "aditionnal_address", "country", "zipcode", "phone_number", "role_id" ) VALUES 
-    (0,'marie.e.geneste@gmail.com', '', 'Madame', 'Marie', 'Genest' , '3 rue du pont', 'a coté du parc', 'France', 35150, 0610201501, 1);
+INSERT INTO "user" ("id", "email", "password", "civility", "firstname", "lastname", "address", "aditionnal_address", "country", "city", "zipcode", "phone_number", "role_id" ) VALUES 
+    (0,'marie.e.geneste@gmail.com', '', 'Madame', 'Marie', 'Genest' , '3 rue du pont', 'a coté du parc', 'France', 'La Rochelle', 35150, 0610201501 , 1),
+    (1, 'fredzem@outlook.fr', '', 'Monsieur', 'Fred', 'Meziere', '1 rue des oliviers', 'sous le pont notre dame', 'France', 'Peypin', 13400, 0627240000, 2)
 
 
 INSERT INTO "category" ("id", "name") VALUES
@@ -20,11 +21,9 @@ INSERT INTO "category" ("id", "name") VALUES
     (3, "Glitters"),
     (4, "Marble"),
     (5, "Nouveautés"),
-    (6, "Autre"),
-    (7, "color");
+    (7, "color"),
+    (6, "Autre");
 
- /* vide la table stretch */
-TRUNCATE TABLE "stretch" CASCADE;
 
 INSERT INTO "product" ("id", "tittle", "description", "price", "price_reduce", "main_image", "guide_image", "category_id", "image_id", "remaining_quantity") VALUES
     (1, 'Famous Valentine', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', '34.99', '', '', '1', '', ''),
@@ -53,5 +52,7 @@ INSERT INTO "product" ("id", "tittle", "description", "price", "price_reduce", "
 INSERT INTO "role" ("id", "name") VALUES
 (1, 'admin'),
 (2, 'user');
+
+
 
 COMMIT;
