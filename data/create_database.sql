@@ -61,6 +61,7 @@ CREATE TABLE "newsletter_mail_suscribed" ( -- Création de la table  newsletter_
 CREATE TABLE "image" ( -- Création de la table image 
 
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        "name_image_category" VARCHAR,
         "url_image" VARCHAR NOT NULL
 );
 
