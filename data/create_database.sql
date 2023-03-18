@@ -82,7 +82,7 @@ CREATE TABLE "product" ( -- Création de la table product
 CREATE TABLE  "purchase" ( 
 
         "id" INT PRIMARY KEY AUTO_INCREMENT,
-        "serial_number" INTEGER NOT NULL, -- numéro d'envoi par la poste ou id de la commande par exemple / ou numéro random 
+        "serial_number" INTEGER(8) NOT NULL, -- numéro d'envoi par la poste ou id de la commande par exemple / ou numéro random 
         "content_description" text NOT NULL, -- Description des produits 
         "price" DECIMAL(3,2) NOT NULL, -- Prix d'un article qui peux etre de 3 chiffres + 2 apres la virgule  ex 29.99
         "date_purchase" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Date d'achat qui sera par défault l'heure ou l'achat sera rentré en base de donnée

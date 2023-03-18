@@ -96,13 +96,17 @@ INSERT INTO "product" ("id", "tittle", "description", "price", "price_reduce", "
     (22, 'Black Gold', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 25.99, NULL, 'https://i.ibb.co/JzC87t8/blackgold1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 5, '', '' );
 
 INSERT INTO "role" ("id", "name") VALUES
-(1, 'admin'),
-(2, 'user');
+    (1, 'admin'),
+    (2, 'user');
 
 INSERT INTO "user_favorites" ("id", "user_id", "product_id") VALUES
-(1, 1, 1),
-(1, 1, 2),
-(1, 1, 4);
+    (1, 1, 1),
+    (1, 1, 2),
+    (1, 1, 4);
 
+INSERT INTO "purchase" ( "id", "serial_number", "content_description", "price", "date_purchase", "status" ) VALUES
+    (1, 00000001, )
+
+        
 
 COMMIT;
