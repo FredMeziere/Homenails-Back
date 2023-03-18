@@ -70,8 +70,8 @@ CREATE TABLE "product" ( -- Création de la table product
         "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- (INT PRIMARY KEY AUTO_INCREMENT ?)
         "title" VARCHAR(255)  NOT NULL,
         "description" TEXT NOT NULL,
-        "price" INTEGER NOT NULL,
-        "price_reduce" INTEGER DEFAULT NULL,
+        "price" DECIMAL(8,2) NOT NULL,
+        "price_reduce" DECIMAL(8,2) DEFAULT NULL,
         "main_image" VARCHAR DEFAULT NULL,
         "guide_image" VARCHAR DEFAULT NULL,
         "category_id" INTEGER REFERENCES "category"("id"),
