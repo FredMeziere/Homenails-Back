@@ -25,43 +25,43 @@ INSERT INTO "category" ("id", "name") VALUES
     (6, "Autre");
 
 INSERT INTO "image" ("id", "name_image_category", "url_image") VALUES
-(1, "",),
-(2),
-(3),
-4 
-5 
-6 
-7 
-8 
-9 
-10
-11 
-12 
-13 
-14 
-15 
-16 
-17 
-18 
-19 
-20
-21 
-22 
-23 
-24 
-25 
-26 
-27 
-28 
-29 
-30
-31 
-32 
-33 
-34 
-35 
-36 
-37 
+(1, 'Famous Valentine', 'https://i.ibb.co/y0h22F5/famousvalentine2.webp'),
+(2, 'Famous Valentine', 'https://i.ibb.co/njmGWs7/famousvalentine3.webp'),
+(3, 'Spring Flower', 'https://i.ibb.co/cFqCZJq/springflower2.webp'),
+(4, 'Spring Flower', 'https://i.ibb.co/whVYjLt/springflower3.webp'),
+(5, 'Summer Flower', 'https://i.ibb.co/zhdTL1J/summer-flower2.webp'),
+(6, 'Summer Flower', 'https://i.ibb.co/f9cPsxG/summer-flower3.webp'),
+(7, 'Alexx', 'https://i.ibb.co/KmDShB4/alexx2.webp'),
+(8, 'Alexx', 'https://i.ibb.co/KmDShB4/alexx2.webp'),
+(9, 'Red Glitters', 'https://i.ibb.co/m0b06fJ/redglitters2.webp'), 
+(10, 'Red Glitters', 'https://i.ibb.co/GPqhTvx/redglitters3.webp'),
+(11, 'White Glitter', 'https://i.ibb.co/HHZBZc2/whiteglitters2.webp'), 
+(12, 'White Glitter', 'https://i.ibb.co/S3T2m1L/whiteglitters3.webp'), 
+(13, '', ''), 
+(14, '', ''), 
+(15, '', ''), 
+(16, '', ''), 
+(17, '', ''), 
+(18, '', ''), 
+(19, '', ''), 
+(20, '', ''),
+(21, '', ''),
+(22, '', ''), 
+(23, '', ''), 
+(24, '', ''), 
+(25, '', ''), 
+(26, '', ''), 
+(27, '', ''), 
+(28, '', ''), 
+(29, '', ''), 
+(30, '', ''),
+(31, '', ''), 
+(32, '', ''), 
+(33, '', ''),
+(34, '', ''), 
+(35, '', ''), 
+(36, '', ''), 
+(37, '', ''), 
 38 
 39 
 40
@@ -69,28 +69,15 @@ INSERT INTO "image" ("id", "name_image_category", "url_image") VALUES
 42 
 43 
 44 
-45 
-46 
-47 
-48 
-49 
-50
-51 
-52 
-53 
-54 
-55 
-56 
-57 
-58 
+
 
 INSERT INTO "product" ("id", "tittle", "description", "price", "price_reduce", "main_image", "guide_image", "category_id", "image_id", "remaining_quantity") VALUES
-    (1, 'Famous Valentine', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 34.99, NULL, 'https://i.ibb.co/mHyZTX8/alexx1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 1, '', ''),
-    (2, 'Spring Flower', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 33.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 2, '', '' ),
-    (3, 'Summer Flower', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 33.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 2, '', '' ),
-    (4, 'Alexx', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 30.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 1, '', '' ),
-    (5, 'Red Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
-    (6, 'White Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
+    (1, 'Famous Valentine', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 34.99, NULL, 'https://i.ibb.co/88xLtCj/famousvalentine1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 1, '', ''),
+    (2, 'Spring Flower', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 33.99, NULL, 'https://i.ibb.co/ZmJqrB1/springflower1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 2, '', '' ),
+    (3, 'Summer Flower', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 33.99, NULL, 'https://i.ibb.co/mzLFpBS/summer-flower1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 2, '', '' ),
+    (4, 'Alexx', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 30.99, NULL, 'https://i.ibb.co/mHyZTX8/alexx1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 1, '', '' ),
+    (5, 'Red Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, 'https://i.ibb.co/7kBn4JS/redglitters1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
+    (6, 'White Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, 'https://i.ibb.co/MRywTrd/whiteglitters1.webp', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
     (7, 'Dark-Red Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
     (8, 'Dark Glitters', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 29.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 3, '', '' ),
     (9, 'Blue Marble', 'Les kit de press-on-nails sont idéals pour celles qui cherchent à avoir de jolies ongles sans avoir à se rendre chez un professionnel. Il contient tout ce dont vous avez besoin pour des ongles parfaits en un rien de temps. Les press-on-nails sont faciles à appliquer et à enlever, et ils sont suffisamment résistants pour durer jusqu''à 3 semaines*. Il y a plusieurs tailles pour s''adapter à toutes les formes d''ongles. Les press-on-nails sont fabriqués à la main avec des matériaux de haute qualité pour un aspect et une sensation naturels. Il y a aussi une variété de couleurs et de motifs pour s''adapter à tous les styles et toutes les occasions. Avec ce kit, vous pourrez avoir des ongles magnifiques à tout moment. Pour connaître les tailles de vos ongles, vous pouvez soit commander un sizing kit ( en amont ou bien dans la même commande** ) ou alors les mesurer vous même grâce au tuto fournis dans les images du kit mais le risque de ce tromper est plus élevé avec cette méthode. Les kits ne sont ni échangés, ni remboursés étant donné que ce sont des kits personnalisés. *Si collé avec de la colle à faux-ongles. **Si sizing commandé dans la même commande, le délai de livraison du kit dépendra de la bonne récéption de vos tailles.', 33.99, NULL, '', 'https://i.ibb.co/Dp9G9YT/guidetaille.webp', 4, '', '' ),
