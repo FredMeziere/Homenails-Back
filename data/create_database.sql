@@ -104,11 +104,6 @@ CREATE TABLE "category_product" (  -- Table jointure entre category et product N
         "product_id" INTEGER REFERENCES "product"("id"),
 );
 
-/*CREATE TABLE "image_product" ( 
-
-        "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "name" VARCHAR(255) NOT NULL
-);*/
 
 CREATE TABLE  "user_purchase" (  -- Table jointure entre user et purchase N, N pour avoir la possibilité de récuperer tous les achats d'un utilisateur
 
