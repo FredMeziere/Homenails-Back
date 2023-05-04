@@ -52,10 +52,7 @@ CREATE TABLE "user" ( -- Création de la table  User
         "role_id" INTEGER DEFAULT 2 REFERENCES "role"("id")
     );
 
-CREATE TABLE "newsletter_mail_suscribed" ( -- Création de la table  newsletter_mail_suscribed pour les personnes voulant uniquement souscrire a la newslater
-        "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "email" VARCHAR NOT NULL
-);
+-
 
 
 CREATE TABLE "image" ( -- Création de la table image 
@@ -67,7 +64,7 @@ CREATE TABLE "image" ( -- Création de la table image
 
 CREATE TABLE "product" ( -- Création de la table product
 
-        "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- (INT PRIMARY KEY AUTO_INCREMENT ?)
+        "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- (INT PRIMARY KEY AUTO_INCREMENT ?)
         "title" VARCHAR(255)  NOT NULL,
         "description" TEXT NOT NULL,
         "price" DECIMAL(8,2) NOT NULL,
@@ -75,8 +72,8 @@ CREATE TABLE "product" ( -- Création de la table product
         "main_image" VARCHAR DEFAULT NULL,
         "guide_image" VARCHAR DEFAULT NULL,
         "category_id" INTEGER REFERENCES "category"("id"),
-        'image_id' VARCHAR NOT NULL REFERENCES "image"("id"),
-        "remaining_quantity" INT CHECK(quantity = 0 OR (quantite >= 1 AND quantite <= 9) OR quantite > 9)
+        'image_id' VARCHAR NULL REFERENCES "image"("id"),
+        "remaining_quantity" INTEGER CHECK(quantity = 0 OR (quantity >= 1 AND quantity <= 9) OR quantity > 9)
     );
 
 CREATE TABLE  "purchase" ( 
@@ -87,6 +84,12 @@ CREATE TABLE  "purchase" (
         "price" DECIMAL(3,2) NOT NULL, -- Prix d'un article qui peux etre de 3 chiffres + 2 apres la virgule  ex 29.99
         "date_purchase" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Date d'achat qui sera par défault l'heure ou l'achat sera rentré en base de donnée
         "status" VARCHAR(50) NOT NULL -- en cours (de traitement) / traitée / en livraison / terminée
+);
+
+CREATE TABLE 'category' (
+        
+                "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                "name" VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE "purchase_product" (
