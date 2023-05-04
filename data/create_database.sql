@@ -38,56 +38,59 @@ CREATE TABLE "role" ( -- Création de la table  Role
 CREATE TABLE "user" ( -- Création de la table  User
 
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "civility" civility NOT NULL,
         "email" email NOT NULL UNIQUE,
         "password" VARCHAR NOT NULL,
         "firstname" VARCHAR NOT NULL,
         "lastname" VARCHAR NOT NULL,
+        "civility" civility NOT NULL,
         "address" VARCHAR DEFAULT NULL,
         "aditionnal_address" VARCHAR DEFAULT NULL,
-        "contry" VARCHAR DEFAULT NULL,
+        "country" VARCHAR DEFAULT NULL,
+        "city" VARCHAR DEFAULT NULL,
         "zipcode" postal_code_europe VARCHAR(6) DEFAULT NULL,
         "phone_number" phone_number INTEGER DEFAULT NULL,
         "role_id" INTEGER DEFAULT 2 REFERENCES "role"("id")
     );
 
-CREATE TABLE "newsletter_mail_suscribed" ( -- Création de la table  newsletter_mail_suscribed pour les personnes voulant uniquement souscrire a la newslater
-        "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "email" VARCHAR NOT NULL
-);
-
+-
 
 
 CREATE TABLE "image" ( -- Création de la table image 
 
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        "name_image_category" VARCHAR,
         "url_image" VARCHAR NOT NULL
 );
 
 CREATE TABLE "product" ( -- Création de la table product
 
-        "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- (INT PRIMARY KEY AUTO_INCREMENT ?)
+        "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY, -- (INT PRIMARY KEY AUTO_INCREMENT ?)
         "title" VARCHAR(255)  NOT NULL,
         "description" TEXT NOT NULL,
-        "price" INTEGER NOT NULL,
-        "price_reduce" INTEGER DEFAULT NULL,
+        "price" DECIMAL(8,2) NOT NULL,
+        "price_reduce" DECIMAL(8,2) DEFAULT NULL,
         "main_image" VARCHAR DEFAULT NULL,
         "guide_image" VARCHAR DEFAULT NULL,
         "category_id" INTEGER REFERENCES "category"("id"),
-        'image_id' VARCHAR NOT NULL REFERENCES "image"("id"),
-        "remaining_quantity" INT CHECK(quantity = 0 OR (quantite >= 1 AND quantite <= 9) OR quantite > 9)
+        'image_id' VARCHAR NULL REFERENCES "image"("id"),
+        "remaining_quantity" INTEGER CHECK(quantity = 0 OR (quantity >= 1 AND quantity <= 9) OR quantity > 9)
     );
 
 CREATE TABLE  "purchase" ( 
 
         "id" INT PRIMARY KEY AUTO_INCREMENT,
-        "serial_number" INTEGER NOT NULL, -- numéro d'envoi par la poste ou id de la commande par exemple / ou numéro random 
+        "serial_number" INTEGER(8) NOT NULL, -- numéro d'envoi par la poste ou id de la commande par exemple / ou numéro random 
         "content_description" text NOT NULL, -- Description des produits 
         "price" DECIMAL(3,2) NOT NULL, -- Prix d'un article qui peux etre de 3 chiffres + 2 apres la virgule  ex 29.99
         "date_purchase" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Date d'achat qui sera par défault l'heure ou l'achat sera rentré en base de donnée
         "status" VARCHAR(50) NOT NULL -- en cours (de traitement) / traitée / en livraison / terminée
 );
 
+CREATE TABLE 'category' (
+        
+                "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                "name" VARCHAR(255) NOT NULL
+);
 
 CREATE TABLE "purchase_product" (
 
@@ -100,16 +103,11 @@ CREATE TABLE "purchase_product" (
 CREATE TABLE "category_product" (  -- Table jointure entre category et product N, N
 
         "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "name" VARCHAR(255) NOT NULL
+        "name" VARCHAR(255) NOT NULL,
         "category_id" INTEGER REFERENCES "category"("id"),
         "product_id" INTEGER REFERENCES "product"("id"),
 );
 
-/*CREATE TABLE "image_product" ( 
-
-        "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-        "name" VARCHAR(255) NOT NULL
-);*/
 
 CREATE TABLE  "user_purchase" (  -- Table jointure entre user et purchase N, N pour avoir la possibilité de récuperer tous les achats d'un utilisateur
 

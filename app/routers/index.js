@@ -5,7 +5,6 @@ const { Router } = require("express");
 const productRouter = require("./productRouter");
 
 
-
 // Création du router principal
 const router = Router();
 
