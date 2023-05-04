@@ -3,7 +3,6 @@ const { Router } = require("express");
 
 // Imports des differents routeurs
 const productRouter = require("./productRouter");
-const userRouter = require("./userRouter");
 
 
 // Création du router principal
