@@ -11,12 +11,9 @@ async getAllCategories(req, res) {
     }
 
     catch (error) {
-        console.log(error);
         res.status(500).json({ error: "Internal server error" });
     }
 },
-
-// méthode pour récupérer une catégorie par son id
 
 async getOneCategory(req, res) {
     try {
@@ -44,16 +41,43 @@ async createCategory(req, res) {
             id : newCategory.id,
             name: newName.id
         })
+
     } catch (error) {
         return res.status(500).json({ error: "Internal server error" });
     }
 },
 
-//Modification ou non d'une catégorie ?
+//Modification ou non d'une catégorie 
+async updateCategory(req, res) {
+    try {
+        const categoryId = req.params.id;
+        const category = await Category.findByPk(categoryId);
+        if (!category) {
+            return res.status(404).json({ error: "Category not found" });
+        }
+        const {
+            name
+        } = req.body;
+
+        await category.update({
+            name
+        });
+
+        res.status(200).json({
+            id : category.id,
+            name: category.name
+        });
+
+    } catch (error) {
+        
+        return res.status(500).json({ error: "Internal server error" });
+    }},
 
 async deleteCategory(req, res) {
+
     const categoryId = req.params.id;
     const category = await Category.findByPk(categoryId);
+    
     if (!category) {
         return res.status(404).json({ error: "Category not found" });
     }

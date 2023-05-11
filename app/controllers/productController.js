@@ -6,9 +6,9 @@ const productController = {
 
      
         try {
-            const Product = await Stretch.findAll();
+            const   product = await product.findAll();
            
-            const filtredProduct = Product.map(produit => {
+            const filtredProduct = product.map(produit => {
                 return {
                     id : produit.id,
                     title: produit.title,
@@ -25,7 +25,6 @@ const productController = {
             res.status(200).json(filtredProduct);
 
         } catch (error) {
-            console.log(error);
             return res.status(500).json({ error: "Internal server error" });
         }
     },
@@ -38,7 +37,6 @@ const productController = {
             res.status(200).json(product);
 
         } catch (error) {
-            console.log(error);
             return res.status(500).json({ error: "Internal server error" });
         }
     },
@@ -70,7 +68,7 @@ const productController = {
             }); 
             
             res.status(201).json({
-                stretch: {
+                product: {
                     id: newProduct.id,
                     title: newProduct.title,
                     description: newProduct.description,
@@ -86,7 +84,6 @@ const productController = {
 
     
         } catch (error) {
-            console.log(error);
             return res.status(500).json({ errorMessage: "Erreur serveur" });
         }
     },
@@ -94,7 +91,7 @@ const productController = {
     async updateProduct(req, res) {
         const {title, description, price, price_reduce, main_image, guide_image, category_id, image_id, remaining_quantity} = req.body;
         const productId = req.params.id;
-        const productToUpdate = await Stretch.findByPk(productId);
+        const productToUpdate = await Product.findByPk(productId);
 
         if (title !== undefined) {
             productToUpdate.title = title;

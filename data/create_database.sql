@@ -55,7 +55,6 @@ CREATE TABLE "user" ( -- Création de la table  User
 
 -
 
-
 CREATE TABLE "image" ( -- Création de la table image 
 
         "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
