@@ -42,7 +42,8 @@ CREATE TABLE "user" ( -- Création de la table  User
         "password" VARCHAR NOT NULL,
         "firstname" VARCHAR NOT NULL,
         "lastname" VARCHAR NOT NULL,
-        "civility" civility NOT NULL,
+        "birthdate" DATE NOT NULL,
+        "gender" civility NOT NULL,
         "address" VARCHAR DEFAULT NULL,
         "aditionnal_address" VARCHAR DEFAULT NULL,
         "country" VARCHAR DEFAULT NULL,
@@ -53,7 +54,6 @@ CREATE TABLE "user" ( -- Création de la table  User
     );
 
 -
-
 
 CREATE TABLE "image" ( -- Création de la table image 
 

@@ -29,7 +29,12 @@ User.init({
         allowNull: false
     },
 
-    civility: {
+    birthdate: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
+    gender: {
         type: DataTypes.STRING,
         allowNull: false
 
